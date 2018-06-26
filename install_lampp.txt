@@ -17,3 +17,21 @@ sudo apt-get install libapache2-mod-php5.6
 sudo apt-get install libapache2-mod-php7.0
 
 sudo apt-get install mysql-server
+
+
+sudo a2enmod rewrite
+/********************************/
+/sites-available/000-default.conf
+
+    ServerAdmin webmaster@localhost
+	DocumentRoot /var/www/html
+	<Directory />
+		Options FollowSymLinks
+		AllowOverride All
+	</Directory>
+	<Directory /var/www/>
+		Options Indexes FollowSymLinks MultiViews
+		AllowOverride All
+		Order allow,deny
+		allow from all
+	</Directory>
