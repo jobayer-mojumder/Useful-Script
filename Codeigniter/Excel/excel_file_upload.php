@@ -1,17 +1,15 @@
 <?php
 
-$configUpload['upload_path'] = 'excel/';						
-$configUpload['encrypt_name'] = FALSE;						
+$configUpload['upload_path'] = 'excel/';
+$configUpload['encrypt_name'] = FALSE;
 $configUpload['allowed_types'] = 'xls|xlsx|csv';
 
 $this->load->library('upload', $configUpload);
-if ($this->upload->do_upload('file')){	
-	
-	$upload_data = $this->upload->data(); 
+if ($this->upload->do_upload('file')){
+
+	$upload_data = $this->upload->data();
 	$file_name = $upload_data['file_name'];
 						//$extension = $upload_data['file_ext'];
-
-
 	try {
 		$this->load->library('excel');
 		$objPHPExcel = PHPExcel_IOFactory::load('excel/'.$file_name);}

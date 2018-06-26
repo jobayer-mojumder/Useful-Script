@@ -1,0 +1,4 @@
+sudo ntfsfix /dev/sda3
+sudo ntfsfix /dev/sda5
+sudo ntfsfix /dev/sda6
+sudo ntfsfix /dev/sda7
