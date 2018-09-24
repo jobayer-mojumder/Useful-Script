@@ -1,0 +1,12 @@
+Dear Sir/Madam,\r\n\r\nPlease find your INTERVIEW CARD in your User login for viva voce of Manaqement Trainee Officer position of Mercantile Bank Limited.\r\n\r\nThanking you.\r\n\r\nSincerely yours,\r\n\r\nMohammad Iqbal Rezwan\r\nExecutive Vice president &\r\nHead of HR
+
+gmail_sender = 'hrd@mblbd.com'
+gmail_passwd = 'Mblhrd$123'
+server = smtplib.SMTP('webmail.mblbd.com', 587)
+
+
+Dear Sir/Madam,\r\n\r\nPlease find ADMIT CARD from the following link in your User login for written exam to be held on August 11, 2018 for Management Trainee Officer of Mercantile Bank Limited.\r\n\r\nLink : http://www.mblbd.com/career/mycv/login\r\n\r\nThanking you.\r\n
+Sincerely yours,\r\n\r\nMohammad Iqbal Rezwan\r\nSenior Executive Vice President &;\r\nHead of HR
+
+ADMIT CARD for written exam to be held on August 11, 2018 for Management Trainee
+Officer of Mercantile Bank Limited.
