@@ -3,26 +3,24 @@ import csv
 
 def mail(email):
     recevier = email
-    SUBJECT = 'TEST MAIL'
-    message = 'Here is a message from python.'
+    SUBJECT = 'Bangladesh Clean Energy Summit 2019'
+    message = 'Bangladesh, with its economy steadily growing at annual rate of above 7%, is fast transposing to a large energy consuming country in the South Asia region.'
 
-    gmail_sender = 'hrd@mblbd.com'
-    gmail_passwd = 'Hrd@1234'
+    sender = 'test@idcol.org'
+    password = 'Asdf1234'
 
-    server = smtplib.SMTP('webmail.mblbd.com', 587)
+    server = smtplib.SMTP('smtp.office365.com', 587)
     server.ehlo()
-    server.login(gmail_sender, gmail_passwd)
+    server.starttls()
+    server.login(sender, password)
 
-    BODY = '\r\n'.join(['TO: %s' % recevier,
-                        'From: %s' % gmail_sender,
-                        'Subject: %s' % SUBJECT,
-                        '', message])
+    BODY = '\r\n'.join(['TO: %s' % recevier,'From: %s' % sender,'Subject: %s' % SUBJECT,'', message])
 
     try:
-        server.sendmail(gmail_sender, [recevier], BODY)
+        server.sendmail(sender, [recevier], BODY)
         print ('email sent : ', email)
     except:
-        print ('error sending mail : ',email)
+        print ('***error sending mail : ',email)
 
     server.quit()
     
