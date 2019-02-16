@@ -9,9 +9,9 @@ sudo apt-get update
 sudo apt install php5.6
 sudo apt install php7.1
 
-sudo apt install php5.6-cli php5.6-xml php5.6-mysql php5.6-fpm php5.6-mcrypt php5.6-mbstring php5.6-zip
+sudo apt install php5.6-cli php5.6-xml php5.6-mysql php5.6-fpm php5.6-mcrypt php5.6-mbstring php5.6-zip php5.6-gd php5.6-curl
 
-sudo apt install php7.1-cli php7.1-xml php7.1-mysql php7.1-fpm php7.1-mcrypt php7.1-mbstring php7.1-zip
+sudo apt install php7.1-cli php7.1-xml php7.1-mysql php7.1-fpm php7.1-mcrypt php7.1-mbstring php7.1-zip php7.1-gd php7.1-curl
 
 sudo apt-get install libapache2-mod-php5.6
 sudo apt-get install libapache2-mod-php7.1
@@ -20,7 +20,7 @@ sudo apt-get install mysql-server
 {
     sudo mysql -u root -p
     
-    ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'new-root';
+    ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'root';
     sudo service mysql stop
     sudo service mysql start
 }
