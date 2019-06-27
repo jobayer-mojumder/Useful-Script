@@ -45,3 +45,9 @@ sudo a2enmod rewrite
 		Order allow,deny
 		allow from all
 	</Directory>
+	
+
+mysql -u root -p < alldb.sql
+
+mysqldump -u root -p --all-databases > alldb.sql
+
